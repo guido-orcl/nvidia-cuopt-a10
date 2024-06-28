@@ -1,6 +1,6 @@
 # Deploy NVIDIA cuOpt on Oracle Linux on A10 Instance
 
-This Oracle Cloud Infrastructure (OCI) Resource Manager stack deploys an A10 instance running Oracle Linux and installs NVIDIA cuOpt in an existing Virtual Cloud Network (VCN).
+This Oracle Cloud Infrastructure (OCI) Resource Manager stack deploys an A10 (VM.GPU.A10.1) instance running Oracle Linux and installs NVIDIA cuOpt in an existing Virtual Cloud Network (VCN).
 
 ## Prerequisites
 
