@@ -41,22 +41,6 @@ The following variables need to be configured for the stack:
 - **ad**: Name of the availability domain.
 - **nvidia_api_key**: NVIDIA cuOpt API key.
 
-## Deployment Steps
-
-1. **Download the Stack**: Ensure you have the stack's JSON configuration file.
-2. **Upload to OCI Resource Manager**:
-    - Go to the OCI Console.
-    - Navigate to **Resource Manager**.
-    - Click **Stacks** and then **Create Stack**.
-    - Upload the JSON configuration file.
-3. **Configure the Stack**:
-    - Fill in the required configuration details as specified above.
-4. **Run the Stack**:
-    - After configuration, click on **Apply** to start the deployment.
-    - Monitor the progress in the **Jobs** section.
-5. **Access the Instance**:
-    - Use your SSH private key to connect to the instance once it is running.
-
 ## Post Deployment
 
 After the deployment completes:
