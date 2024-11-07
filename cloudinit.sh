@@ -16,6 +16,7 @@ log "Starting installation of nvidia-container-toolkit and cuopt..."
 
 # Get API key from Terraform variable
 api_key="${nvidia_api_key}"
+cuopt_version="${cuopt_version}"
 
 # Install nvidia-container-toolkit
 broadcast "Installing nvidia-container-toolkit..."
@@ -66,7 +67,7 @@ log "Logged in to nvcr.io successfully."
 # Pull cuopt from nvcr.io
 broadcast "Pulling cuopt from nvcr.io. This may take a while..."
 log "Pulling cuopt from nvcr.io..."
-sudo podman pull nvcr.io/nvidia/cuopt/cuopt:24.03 >/dev/null
+sudo podman pull nvcr.io/nvidia/cuopt/cuopt:$cuopt_version >/dev/null
 broadcast "cuopt pulled successfully."
 log "cuopt pulled successfully."
 
@@ -81,7 +82,7 @@ After=network.target
 [Service]
 Type=simple
 Restart=always
-ExecStart=/usr/bin/podman run --rm --device nvidia.com/gpu=all -p 5000:5000 nvcr.io/nvidia/cuopt/cuopt:24.03
+ExecStart=/usr/bin/podman run --rm --device nvidia.com/gpu=all -p 5000:5000 nvcr.io/nvidia/cuopt/cuopt:$cuopt_version
 
 [Install]
 WantedBy=multi-user.target
