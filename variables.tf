@@ -44,3 +44,7 @@ variable "nvidia_api_key" {
   default     = "NVIDIA API Key"
 }
 
+variable "cuopt_version" {
+  description = "NVIDIA cuOpt version"
+  default     = "24.07"
+}
