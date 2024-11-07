@@ -25,6 +25,7 @@ variableGroups:
   - ssh_public_key
   - ad
   - nvidia_api_key
+  - cuopt_version
 variables:
   
   compartment_ocid:
@@ -76,6 +77,13 @@ variables:
     type: string
     required: true
     title: NVIDIA API Key
+
+  cuopt_version:
+    type: string
+    required: true
+    title: NVIDIA cuOpt version
+    default: "24.07"
+
 
   
   
